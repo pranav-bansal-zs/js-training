@@ -100,20 +100,20 @@ const promise4=Promise.race([promise4_1,promise4_2]).then((res)=>{
     console.log(res);
 })
 
-// //Question5
+//Question5
 
-// const promise5_1=new Promise((res,rej)=>{
-//     res("success for promise5_1");
-// })
-// const promise5_2=new Promise((res,rej)=>{
-//     res("success for promise5_2");
-// })
-// const promise5_3=new Promise((res,rej)=>{
-//     rej("failed for promise5_3");
-// })
-// const promise5=Promise.all([promise5_1,promise5_2,promise5_3]).then((result)=>{
-//     console.log(result);
-// })
+const promise5_1=new Promise((res,rej)=>{
+    res("success for promise5_1");
+})
+const promise5_2=new Promise((res,rej)=>{
+    res("success for promise5_2");
+})
+const promise5_3=new Promise((res,rej)=>{
+    rej("failed for promise5_3");
+})
+const promise5=Promise.all([promise5_1,promise5_2,promise5_3]).then((result)=>{
+    console.log(result);
+})
 
 //Question6
 
@@ -158,4 +158,31 @@ console.log("Promises all",promise8_1);
 const promise8_2=Promise.race([data4,data5,data6]).then((res)=>{console.log(res)});
 console.log("Fastest Response:",promise8_2);
 
-//Question9
+// //Question9
+// const promise9_1=new Promise((res,rej)=>{
+//     var result=Math.floor(Math.random(2));
+//     if(result){
+//         res("success for promise9_1");
+//     }else{
+//         rej("Failed for promise9_1");
+//     }
+// })
+// const promise9=Promise.all([promise9_1,promise9_1,promise9_1]).then((res)=>{
+//     console.log(res);
+// })
+
+//Question10
+function function10_1(a,b){
+    return new Promise((res,rej)=>{
+        res(a+b);
+    }
+)
+}
+function function10_2(a,b){
+    return new Promise((res,rej)=>{
+        res(a*b);
+    }
+)
+}
+function10_1(1,2).then((res)=>function10_2(res,4)).then((res)=>console.log(res));
+
