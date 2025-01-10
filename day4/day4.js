@@ -158,18 +158,18 @@ console.log("Promises all",promise8_1);
 const promise8_2=Promise.race([data4,data5,data6]).then((res)=>{console.log(res)});
 console.log("Fastest Response:",promise8_2);
 
-// //Question9
-// const promise9_1=new Promise((res,rej)=>{
-//     var result=Math.floor(Math.random(2));
-//     if(result){
-//         res("success for promise9_1");
-//     }else{
-//         rej("Failed for promise9_1");
-//     }
-// })
-// const promise9=Promise.all([promise9_1,promise9_1,promise9_1]).then((res)=>{
-//     console.log(res);
-// })
+//Question9
+const promise9_1=new Promise((res,rej)=>{
+    var result=Math.floor(Math.random(2));
+    if(result){
+        res("success for promise9_1");
+    }else{
+        rej("Failed for promise9_1");
+    }
+})
+const promise9=Promise.all([promise9_1,promise9_1,promise9_1]).then((res)=>{
+    console.log(res);
+})
 
 //Question10
 function function10_1(a,b){
@@ -178,7 +178,7 @@ function function10_1(a,b){
     }
 )
 }
-function function10_2(a,b){
+function function10_2(a,b){x
     return new Promise((res,rej)=>{
         res(a*b);
     }

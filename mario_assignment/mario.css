@@ -1,0 +1,12 @@
+.background{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+#mario{
+    width: 110px;
+    height:110px;
+    position: absolute;
+    bottom:84px;
+    left:0px
+}
